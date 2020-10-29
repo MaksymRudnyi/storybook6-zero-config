@@ -1,0 +1,61 @@
+<!--- Checkbox.stories.mdx -->
+
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import Input  from '.';
+
+<Meta title="Components/Input" component={Input} />
+
+# Checkbox
+
+With `MDX` we can define a story for `Input` right in the middle of our
+Markdown documentation.
+
+<!--- This is your Story template function, shown here in React -->
+
+export const Template = (args) => <Input {...args} />
+
+<Canvas>
+  <Story name="Unchecked1" args={{ 
+      label: 'Unchecked'
+    }}>
+    {Template.bind({})}
+   </Story>
+  <Story name="Checked1" args={{ 
+      label: 'Unchecked', 
+      checked: true 
+    }}>
+    {Template.bind({})}
+   </Story>
+  <Story name="Secondary1" args={{
+    label: 'Secondary', 
+    checked: true, 
+    appearance: 'secondary'
+  }}>
+    {Template.bind({})}
+   </Story>
+</Canvas>
+
+
+Custome components
+With default data
+
+<Canvas>
+  <Story name="Unchecked" args={{ 
+      label: 'Unchecked'
+    }}>
+    {Template.bind({})}
+   </Story>
+  <Story name="Checked" args={{ 
+      label: 'Unchecked', 
+      checked: true 
+    }}>
+    {Template.bind({})}
+   </Story>
+  <Story name="Secondary" args={{
+    label: 'Secondary', 
+    checked: true, 
+    appearance: 'secondary'
+  }}>
+    {Template.bind({})}
+   </Story>
+</Canvas>
